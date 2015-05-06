@@ -1,0 +1,31 @@
+WebDev Notes/Cheat Sheet
+
+
+
+Cross Browser Compatibility Issues
+==================================
+
+Absolute-positioned elements using percentages
+http://stackoverflow.com/questions/18031649/bug-when-using-absolute-position-and-percentages-to-vertically-center-child-div
+
+	Chrome
+
+		container {
+			position: relative;
+		}
+		container > div {
+			position: absolute;
+			top: 50%;
+		}
+
+	Firefox
+
+		container {
+			position: relative;
+			height: 100%; /* nested div positioning requires this in FF */
+		}
+		container > div {
+			position: absolute;
+			top: 50%
+		}
+
