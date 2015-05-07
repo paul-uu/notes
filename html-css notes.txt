@@ -29,3 +29,9 @@ http://stackoverflow.com/questions/18031649/bug-when-using-absolute-position-and
 			top: 50%
 		}
 
+
+
+
+e.preventDefault(); doesn't work in IE8/9.
+Instead, use: 
+event.preventDefault ? event.preventDefault() : event.returnValue = false;
